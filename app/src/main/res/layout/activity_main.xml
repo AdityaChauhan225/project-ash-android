@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"> <!-- added margin to move items down -->
+
+        <!-- Pick Folder -->
+        <Button
+            android:id="@+id/btnPickFolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Folder"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Wipe Level Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Wipe Level:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerWipeLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Algorithm Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Algorithm:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerAlgorithm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Checkboxes -->
+        <CheckBox
+            android:id="@+id/cbAccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Access Verified"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/cbCert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Certificate Generated"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/cbDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deleted Files"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/cbOverwrite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overwritten Data"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/cbFormat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formatted"
+            android:enabled="false"/>
+
+        <CheckBox
+            android:id="@+id/cbVerify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verified"
+            android:enabled="false"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Wipe"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Log Output -->
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:padding="8dp"
+            android:background="#EEEEEE"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:minHeight="200dp"/>
+    </LinearLayout>
+</ScrollView>
